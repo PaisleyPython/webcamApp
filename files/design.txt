@@ -1,0 +1,21 @@
+Title: Webcam Photo Sharer
+
+Front end: Is the graphical user interface. It's generally a good idea to draw this out, design it properly. 
+It's also probably a good idea to distinguish the front-end from the back-end. 
+
+Description: An app that starts the computer webcam, lets the user capture a photo
+and uploads the photo to the web and creates a sharable link.
+
+nouns: app, user, webcam, photo, link, 
+
+   
+Objects: Webcam:
+            start()
+            stop()
+            capture()
+         FileSharer:
+            filepath
+            api
+            share()
+
+
