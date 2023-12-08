@@ -7,16 +7,21 @@ from filesharer import FileSharer
 
 Builder.load_file('frontend.kv')
 
-# =====================================================================================================
+# ========================================
+# By default the texture of camera is equal to the last frame
 
 
 class CameraScreen(Screen):
-    # A requirement from kivi
+    # A requirement from kivy
     def start(self):
-        pass
+        self.ids.camera.play = True
+        self.ids.start_stop.text = "Stop Camera"
+        self.ids.camera.texture = self.ids.camera.texture
 
     def stop(self):
-        pass
+        self.ids.camera.play = False
+        self.ids.start_stop.text = "Start Camera"
+        self.ids.camera.texture = None
 
     def capture(self):
         pass
@@ -26,9 +31,9 @@ class ImageScreen(Screen):
     # A requirement from kivi
     pass
 
-
-# ==================================================================================================
+# =====================================
 # Boiler plate code continue:-
+
 
 class RootWidget(ScreenManager):
     pass
@@ -43,4 +48,4 @@ class MainApp(App):
 MainApp().run()
 
 # Boiler plate code end:-
-# ==================================================================================================
+# ======================================
