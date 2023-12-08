@@ -6,7 +6,7 @@ from kivy.lang import Builder
 from filesharer import FileSharer
 import time
 
-Builder.load_file('frontend.kv')
+Builder.load_file('files/frontend.kv')
 
 # =======================================
 # By default the texture of camera is equal to the last frame
@@ -26,8 +26,9 @@ class CameraScreen(Screen):
 
     def capture(self):
         current_time = time.strftime('%Y%m%d-%H%M%S')
-        filename = "images/" + current_time + ".png"
-        self.ids.camera.export_to_png(filename)
+        filepath = f"images/{current_time}.png"
+        self.ids.camera.export_to_png(filepath)
+        self.manager.current = "image_screen"
 
 
 class ImageScreen(Screen):
