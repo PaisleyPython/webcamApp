@@ -1,6 +1,6 @@
 <h1>Webcam Photo Sharer Application</h1>
 
-<p>This desktop application will likely never be used 😂 but if so desired, it allows the user to take and share photos </p>
+<p>This desktop application will likely never be used 😂 but if so desired, it allows the user to take and share photos with their computers webcam</p>
 
 <h2>
   Features
